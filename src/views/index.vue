@@ -68,6 +68,7 @@ export default {
     editFlowData() {
       const { graph } = FlowGraph
       graph.getNodes().forEach(node => {
+        // getData 拿到的是我们setData进去的自定义的业务属性
         if(node.getData()) {
           let curStatus = node.getData().status
           node.setData({
