@@ -36,6 +36,7 @@ export default {
     this.destroyFn = this.initGraph()
   },
   destroyed() {
+    // 移除监听、销毁画布、资源回收
     this.destroyFn()
   },
   methods:{
