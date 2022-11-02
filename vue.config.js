@@ -3,5 +3,5 @@ module.exports = defineConfig({
   productionSourceMap: false,
   transpileDependencies: true,
   lintOnSave: false,
-  runtimeCompiler: true
+  // runtimeCompiler: true
 });
