@@ -1,5 +1,19 @@
 import { Graph, Dom, Node } from '@antv/x6'
 import { basicPorts, customPorts } from './ports'
+import '@antv/x6-vue-shape'
+import VueShapeText from '../../../components/VueShapeText/index'
+
+// 使用 Graph.registerVueComponent(...) 方法将 Vue 组件注册到系统中。
+Graph.registerVueComponent(
+  "vue-shape-text",
+  {
+    template: `<VueShapeText />`,
+    components: {
+      VueShapeText,
+    },
+  },
+  true
+);
 
 // 基础节点
 export const FlowChartRect = Graph.registerNode('flow-chart-rect', {

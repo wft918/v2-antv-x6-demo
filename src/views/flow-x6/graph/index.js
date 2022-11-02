@@ -1,6 +1,6 @@
 import {Graph, Addon, FunctionExt, Shape} from '@antv/x6'
 import './shape'
-import { customPorts } from './ports'
+import { customPorts, basicPorts } from './ports'
 import { getImg } from '../../../utils'
 import graphData from './data/data'
 const insertCss = require('insert-css')
@@ -218,7 +218,7 @@ export default class FlowGraph {
         {
           name: 'basic',
           title: '基础节点',
-          graphHeight: 180,
+          graphHeight: 270,
         },
         {
           name: 'custom-image',
@@ -339,6 +339,21 @@ export default class FlowGraph {
         },
       },
     })
+    // // Vue节点
+    // const r5 = graph.createNode({
+    //   shape: 'vue-shape',
+    //   component: 'vue-shape-text',
+    //   width: 80,
+    //   height: 42,
+    //   attrs: {
+    //     body: {
+    //       stroke: '#5F95FF',
+    //       strokeWidth: 1,
+    //       fill: 'transparent',
+    //     },
+    //   },
+    //   ports: { ...basicPorts }
+    // })
     // 组合节点
     const c1 = graph.createNode({
       shape: 'flow-chart-image-rect',
@@ -423,6 +438,7 @@ export default class FlowGraph {
         ports: { ...customPorts }
       })
     })
+    // this.stencil.load([r1, r2, r3, r4, r5], 'basic')
     this.stencil.load([r1, r2, r3, r4], 'basic')
     this.stencil.load(imgNodes, 'custom-image')
     // this.stencil.load([c1, c2, c3], 'combination')

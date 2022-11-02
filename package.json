@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@antv/x6": "^1.34.2",
+    "@antv/x6-vue-shape": "^1.5.3",
     "core-js": "^3.8.3",
     "element-ui": "^2.15.10",
     "insert-css": "^2.0.0",
