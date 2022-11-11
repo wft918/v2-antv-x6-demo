@@ -1,0 +1,1 @@
+module.exports = path => resolve => require([`../views/${ path }`], resolve)

@@ -3,16 +3,18 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
+const _import = require('./import-' + process.env.NODE_ENV)
+
 const routes = [
   {
     path: "/",
     name: "index",
-    component: resolve => require(['../views/index.vue'], resolve),
+    component: _import('index.vue'),
   },
   {
     path: "/flow-x6",
     name: "flow-x6",
-    component: resolve => require(['../views/flow-x6/index.vue'], resolve),
+    component: _import('flow-x6/index.vue'),
   }
 ]
 
